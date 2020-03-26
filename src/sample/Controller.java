@@ -6,9 +6,7 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-
-
-import java.awt.*;
+import javafx.scene.input.MouseEvent;
 
 public class Controller {
     String Size, NrSides, Stroke;
@@ -33,10 +31,13 @@ public class Controller {
         Stroke = StrokeField.getText();
     }
 
-
     @FXML
-    private void DrawSquare(){
+    private void DrawSquare(MouseEvent event){
+        double x = event.getX();
+        double y = event.getY();
+        //System.out.println(x+" "+y);
+
         GraphicsContext g = canvas.getGraphicsContext2D();
-        g.fillRect(15,15, Integer.parseInt(Size),Integer.parseInt(Size));
+        g.fillRect(x,y, Integer.parseInt(Size),Integer.parseInt(Size));
     }
 }
