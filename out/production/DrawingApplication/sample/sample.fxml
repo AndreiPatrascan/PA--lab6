@@ -43,7 +43,7 @@
       </VBox>
    </top>
    <center>
-      <Canvas fx:id="canvas" height="200.0" onMouseClicked="#DrawSquare" onMouseEntered="#getCoords" opacity="0.3" width="330.0" BorderPane.alignment="CENTER">
+      <Canvas fx:id="canvas" height="200.0" onMouseClicked="#DrawSquare" opacity="0.3" width="330.0" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </BorderPane.margin>

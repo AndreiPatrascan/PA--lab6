@@ -9,7 +9,6 @@ import javafx.scene.control.TextField;
 
 
 import java.awt.*;
-import java.awt.event.MouseEvent;
 
 public class Controller {
     String Size, NrSides, Stroke;
@@ -34,17 +33,10 @@ public class Controller {
         Stroke = StrokeField.getText();
     }
 
-    int x_coord, y_coord;
-
-    @FXML
-    private void getCoords(MouseEvent mouseEvent){
-        x_coord = mouseEvent.getX();
-        y_coord = mouseEvent.getY();
-    }
 
     @FXML
     private void DrawSquare(){
         GraphicsContext g = canvas.getGraphicsContext2D();
-        g.fillRect(x_coord,y_coord, Integer.parseInt(Size),Integer.parseInt(Size));
+        g.fillRect(15,15, Integer.parseInt(Size),Integer.parseInt(Size));
     }
 }
